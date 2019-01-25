@@ -1,0 +1,35 @@
+{
+  "name": "fetch-utils",
+  "version": "0.1.0",
+  "description": "A library for adding functionality to fetch, and for mocking.",
+  "main": "dist/fetch-utils.js",
+  "repository": "https://github.com/liron-navon/fetch-utilities",
+  "scripts": {
+    "start": "npm run build && node dist/gql-to-typescript.js",
+    "build": "webpack",
+    "build:prod": "NODE_ENV=production webpack",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublish": "npm run build"
+  },
+  "author": "Liron Navon",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/lodash": "^4.14.118",
+    "@types/node": "^10.12.12",
+    "clean-webpack-plugin": "^1.0.0",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^5.3.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2",
+    "whatwg-fetch": "^3.0.0"
+  }
+}
