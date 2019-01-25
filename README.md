@@ -7,7 +7,7 @@ A library for adding functionality to fetch, and for mocking.
 Creates wrapper that adds interceptors and default values.
 
 ```js
-import { Fetcher } from 'fetch-utils';
+import { Fetcher } from 'fetch-utilities';
 
 const options = {
   defaultInit: {
@@ -40,7 +40,7 @@ fetcher
 Creates a wrapper that mocks routes.
 
 ```js
-import { Mocker } from 'fetch-utils';
+import { Mocker } from 'fetch-utilities';
 
 // you can also import a polyfill for tests: import {fetch} from 'whatwg-fetch';
 // you can also use fetcher.fetch instead of window.fetch

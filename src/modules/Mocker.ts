@@ -1,6 +1,13 @@
 // turns the route into a string to later search
 const hashRoute = (method: string, url: string) => `${method.toLowerCase()}:${url}`;
 
+const fakeResponse = (body: any) => {
+    return {
+        json: () => Promise.resolve(JSON.parse(body)),
+        text: () => Promise.resolve(JSON.stringify(body))
+    };
+};
+
 interface MockerOptions {
     defaultToRealFetch: boolean;
     maxMockLatency: number;
@@ -95,7 +102,7 @@ export class Mocker {
                 if (maxMockLatency < 0 || minMockLatency < 0) {
                     timeout = Math.round(Math.random() * (maxMockLatency - minMockLatency)) + minMockLatency;
                 }
-                const response = new Response(payload);
+                const response = fakeResponse(payload) as Response;
                 setTimeout(() => resolve(response), timeout);
             });
         }

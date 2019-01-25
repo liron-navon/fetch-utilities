@@ -16,8 +16,8 @@ module.exports = {
     ],
     output: {
         path: dist,
-        filename: "fetch-utils.js",
-        library: 'fetch-utils',
+        filename: "fetch-utilities.js",
+        library: 'fetch-utilities',
         libraryTarget: 'umd'
     },
     resolve: {
